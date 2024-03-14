@@ -1,0 +1,323 @@
+ *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Se usa root como lugar donde se pueden definir cariables*/
+/*Desde este lugar, puedes cambiar las fuentes de h1, h3 y p, sin tener que navegar por todo este codigo*/
+:root{
+  --fuente-h1: 'Montserrat';
+  --fuente-h3: "Poppins";
+  --fuente-parrafo: "Lato";
+
+  
+}
+
+
+body p{
+  font-family: var(--fuente-parrafo), sans-serif;
+  font-weight: 400; /*La anchura del texto, usado para hacer las letras en negritas*/
+  
+}
+
+/**********************************************************************************/
+
+
+/*Codigo para el ENCABEZADO*/
+
+/*Cofiguraciones de imagen, fuente, color y tamaño de texto*/
+header{
+    background-image: url(fondooooo.jpg);
+    /background-position: center;/
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /*Las 6 lineas de arriba son parte del proceso para hacer la imagen responsiva y con transparencia*/
+}
+
+header::before{
+    content: '';
+    position: absolute;
+    background-color: black;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .4;
+
+    /*Todo este codigo da la transparemcia, para modificarla cambia el valor de opacity*/
+}
+
+.encabezado{
+    position: relative;
+}
+/*Configuraciones de letras (encabezado)*/
+.encabezado h1{
+    font-family: var(--fuente-h1);
+    justify-content: center;
+    font-weight: 700;
+    color:white;
+    font-size: 15vh; /*vh es una unidad que sirve para hacer proporcional un elemento, en referencia al tamaño de la pantalla (px no es lo mismo que vh)*/
+    
+}
+
+.encabezado h3{
+    font-family: var(--fuente-h3), sans-serif;
+    font-weight: 400;
+    font-size: 2.5vh;
+    color: white;
+}
+
+
+.encabezado::after{
+    content: "";
+    display: table;
+    clear: both;    
+}
+.dropdown::after{
+    content: "";
+    display: table;
+    clear: both; 
+}
+//
+/*Codigo de w3 Schools (lo admito, no le se a css)*/
+
+/* Contenedor de la barra de navegación */
+.navbar {
+    overflow: hidden;
+    background-color: #60286e;
+    font-family: var(--fuente-h1);
+    font-weight: 100;
+  }
+  
+  /* Contenedor de la barra de navegación */
+.barra-navegacion {
+    overflow: hidden;
+    background-color: #60286e;
+    font-family: var(--fuente-h1);
+    font-weight: 100;
+  }
+  
+  /* Configuaraion de Elaces dentro de la barra de navegación */
+  .barra-navegacion a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  /* El contenedor del desplegable */
+  .desplegable {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Botón del desplegable */
+  .desplegable .boton-desplegable {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Importante para la alineación vertical en teléfonos móviles */
+    margin: 0; /* Importante para la alineación vertical en teléfonos móviles */
+  }
+  
+  /* Agregar fondo de color a los enlaces de la barra de navegación al pasar el mouse */
+  .barra-navegacion a:hover, .desplegable:hover .boton-desplegable {
+    background-color: rgb(211, 168, 211);
+  }
+  
+  /* Contenido del desplegable (oculto por defecto) */
+  .contenido-desplegable {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Enlaces dentro del desplegable */
+  .contenido-desplegable a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Agregar un color de fondo gris a los enlaces del desplegable al pasar el ratón */
+  .contenido-desplegable a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Mostrar el menú desplegable al pasar el ratón */
+  .desplegable:hover .contenido-desplegable {
+    display: block;
+  }
+  
+  //
+  
+  /*Configuraciones de letra del cuerpo*/
+  .cuerpo{
+    background-color: #ce93d834;
+  }
+
+  .cuerpo p {
+    padding-left: 5vi;
+    padding-right: 5vi;
+  }
+  .cuerpo h1{
+    text-align: center;
+    font-family: var(--fuente-h1);
+  }
+
+  .cuerpo h3{
+    font-family: var(--fuente-h3);
+  }
+
+  .texto{
+    width: 100%;
+    margin-right: 3%;
+}
+
+
+/*PIE DE PAGINA*/
+.pie{
+  padding: 1vi;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color:#BA68C8;
+}
+
+/Color de texto/
+.pie p{
+  color: white;
+}
+.iconos a{
+  text-decoration: none;
+  margin: 10px;
+}
+.encabezado::after{
+  content: "";
+  display: table;
+  clear: both;    
+}
+
+.cuerpo::after{
+  content: "";
+  display: table;
+  clear: both;    
+}
+
+/*Color de fondo de la barra del final*/
+.fin{
+  background-color: black;
+}
+.fin p{
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1vi;
+  color: aliceblue;
+  
+}
+
+  /*/
+  /*RESPOSIVIDAD DEL DOCUMENTO*/
+
+  
+  @media screen and (max-width: 800px) {
+    /Modifica algunos aspenctos de tamaños de letras e interlineados/
+    .encabezado h1{
+        font-size: 8vh;
+    }
+    .encabezado h3{
+        font-size: 1.5vh;
+    }
+  
+    body p{
+      line-height: 4.3vw; /*Modifica interlineado*/
+    }
+    
+  }
+
+@media screen and (max-width: 500px) {
+  /Solo modifica interlineado/
+  body p{
+    line-height: 5vw;
+  }
+}
+
+//
+/*RESPONSIBIDAD PARA TELEFONOS*/
+
+@media screen and (max-width: 430px) {
+
+  /Las imagenes abrcan mas ancho de pagina, desplanzando el texto hacia abajo/
+  .cuerpo img{
+    width: 60%;
+    text-align: center;
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /Permite que el texto se haga hacia abajo, ademas configura el interlineado/
+  body p{
+    content: "";
+    display: table;
+    clear: both; 
+    line-height: 5.5vw;
+  }
+
+  body h3{
+    content: "";
+    display: table;
+    clear: both; 
+  }
+  
+  /*Da margenes internos a la barra del final (haciendola mas alta)*/
+  .fin{
+    padding-top: 2vi;
+    padding-bottom: 2vi;
+  }
+  /Da margenes internos al pie de pagina (haciendola mas alta)/
+  .pie{
+    padding-top: 7vi;
+    padding-bottom: 7vi;
+  }
+
+  /Hace que los elementos del menu superior, abarquen toda la pantalla, haciendo que uno quede abajo de otro, ademas centra el texto/
+  .desplegable{
+    text-align: center;
+    width: 100%;
+  }
+
+  /*Hace que el cuadro saliente mida todo el ancho de pantalla, y centra el texto*/
+  .contenido-desplegable{
+    text-align: center;
+    width: 100%;
+  }
+
+  /*Lo mismo que el anterior, pero solo configura el inicio*/
+  #inicio{
+    text-align: center;
+    width: 100%;
+  }
+}
